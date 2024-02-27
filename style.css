@@ -1,0 +1,469 @@
+*{
+margin:0;
+padding: 0;
+box-sizing:border-box;
+font-family: 'Times New Roman', Times, serif;
+}
+header{
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 500;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(14, 14, 14);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    border-bottom: 2px groove;
+}
+.logo{
+    display: inline-block;
+    border-right: 2px groove;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(21, 137, 240);
+    color: rgb(252, 252, 252);
+    cursor: pointer;
+    max-width: 1in;
+    max-height: 1in;
+}
+.image{
+    border-right: 2px groove;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(21, 137, 240);
+    color: rgb(252, 252, 252);
+    cursor: pointer;
+    max-width: 1in;
+    max-height: 1in;
+}
+.body{
+    margin-top: 175px;
+    position:relative;
+    padding: 20px;
+}
+body{
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(image/outlet3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.remove-icon{
+    position:absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 2em;
+    color: rgb(164, 187, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius:10px;
+
+
+
+}
+.navigation{
+    text-align: center;
+    line-height: 35px;
+    align-items: center;
+}
+.navigation a {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(7, 7, 7);
+    color: rgb(233, 233, 233);
+    position: relative;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after{
+   color: aliceblue;
+   
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background:rgb(255, 105, 105);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform.5s;
+}
+.navigation a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.navigation .login-click{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    margin-left: 20px;    
+}
+.navigation .login-click:hover{
+    color: black;
+    background-color: aqua;
+}
+.wrapper {
+    top: -50px;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    transition: height .2s ease;
+    display: none;
+}
+
+.wrapper.active{
+    display: flex;
+}
+.wrapper.active{
+    height: 500px;
+    
+}
+.form-box.active{
+    transform: translateX(-500px);
+}
+.register-box.active{
+    display: block;
+    transform: translateX(-5px);
+}
+.input-box{
+    position:relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(27, 26, 26);
+    margin: 20px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(34, 35, 36);
+    font-weight: 500;
+    pointer-events: none;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+        top: -4px;
+        transition: .5s;
+        
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: black;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    line-height: 60px;
+    font-size: 1em;
+    color: rgb(99, 79, 79);
+
+}
+.searchbar{
+    border-radius: 30px;
+    border: 2px solid black;
+    background-color: aliceblue;
+    font-size: 1em ;
+    font-weight: lighter;
+    height: 30px;
+    margin: 5px;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+
+}
+
+.card ,.name ,.age ,.location{
+    justify-content:space-evenly;
+    flex-direction: row;
+    display: flex;
+    font-weight: bolder;
+}
+.myUL{
+    margin-top: 150px;
+    margin-left: -200px;
+    line-height: 6vh;
+    list-style: none;
+    position: absolute;
+    display: block;
+}
+
+.member-container h2{
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 5px 180px;
+    
+}
+.myUL h2{
+
+        background-color: rgb(170, 161, 161);
+        border: 2px solid black;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        padding: 5px 180px;    
+}
+.member-card h2{
+    background-color: rgb(170, 161, 161);
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 5px 180px;
+}
+.member-card-container{
+    background-color: rgb(176, 177, 179);
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 5px 180px;
+}
+.member-card-container .remove-icon{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.myUL a{
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+.id-no{
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 5px 200px;
+}
+.id-no:hover{
+    color: red;
+}
+#searchbar{
+   border-radius: 50px;
+    border: 0;
+    outline: none;
+    font-size: 1em;
+    height: 20px;
+    width: 50%;
+    margin: 5px;
+    padding: 2px;
+}
+
+
+.remember-forgot{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: .9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: black;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+
+.btn{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+    color: rgb(240, 227, 227);
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-register{
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.login-register p a{
+    font-weight: 500;
+    text-decoration: none;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+
+}
+.remove-icon{
+    cursor: pointer;
+    background-size: 1em;
+}
+
+.ft-cardOne{
+    padding: 20px;
+    background-color: aliceblue;
+    width: 400px;
+    display: none;
+}
+.ft-cardOne.active{
+display: block;
+}
+.gr-cardTwo{
+    padding: 20px;
+    background-color: aliceblue;
+    width: 400px;
+    display: none;
+}
+.gr-cardTwo.active{
+    display: block;
+    }
+.op-cardFour{
+    padding: 20px;
+    background-color: aliceblue;
+    width: 400px;
+    display: none;
+}
+.op-cardFour.active{
+display: block;
+}
+.tf-cardFive{
+    padding: 20px;
+    background-color: aliceblue;
+    width: 400px;
+    display: none;
+}
+.tf-cardFive.active{
+display: block;
+}
+.kta6{
+    padding: 20px;
+    background-color: aliceblue;
+    width: 400px;
+    display: none;
+}
+.kta6.active{
+display: block;
+}
+.kta8{
+    padding: 20px;
+    background-color: aliceblue;
+    width: 400px;
+    display: none;
+}
+.kta8.active{
+display: block;
+}
+.kta9{
+    padding: 20px;
+    background-color: aliceblue;
+    width: 400px;
+    display: none;
+}
+.kta9.active{
+display: block;
+}
+.hl-cardThree{
+        padding: 20px;
+        background-color: aliceblue;
+        width: 400px;
+        display: none;
+    }
+.hl-cardThree.active{
+        display: block;
+        }
+.myUL.active{
+    display: none;
+}
+.memberRemove-icon ,.memberRemove-iconTwo ,.memberRemove-iconThree,.memberRemove-iconFour,.memberRemove-iconFive,.memberRemove-iconSix,.memberRemove-iconEight,.memberRemove-iconNine{
+    position:absolute;
+    background-color: black;
+    margin-top: -20px;
+    margin-left: 350px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 2em;
+    color: rgb(201, 211, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius:10px;
+
+}
+
+.memberRemove-icon a{
+    text-decoration: none;
+    padding-top: 7px;
+    color: white;
+}
+.memberRemove-icon a:hover{
+    color: red;
+}
+
+.form-box h2{
+    text-align: center;
+    font-size: 2em;
+    color: rgb(22, 22, 21);
+}
+
+.register-box{
+    position: absolute;
+    transform: translateX(400px);
+    
+}
+.register-box h2{
+    text-align: center;
+    font-size: 2em;
+    color: rgb(22, 22, 21);
+}
+
+.middle{
+    position:fixed;
+}
